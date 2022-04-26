@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Raleway:wght@500&display=swap");
+/* Globals */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
+.uibtn {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+}
+.uibtn:active {
+  transform: scale(0.9);
+  transition: transform 0.1s ease;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 560px;
+  background-image: linear-gradient(135deg, #ffffff, #f1f1f1);
+  align-items: center;
+  box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.288);
+  margin: 2rem auto;
+  position: relative;
+  /* padding: 0 0.8rem 0 0.8rem; */
+}
+/* Globals */
+
+.main-container {
+  display: flex;
+  align-items: center;
+  height: 480px;
+  margin-top: 1rem;
+  width: 100%;
+  overflow-x: hidden;
+  border: 1px solid black;
+  position: relative;
+}
+.main-container .song-container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1.5rem;
+  right: 0;
+  transform: translateX(9%);
+}
+.top-bar {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 0.3rem 0;
+}
+.top-bar button {
+  margin-top: -5px;
+}
+.top-bar h6 {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+.main-container > h6 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.main-container #albumname {
+  font-size: 0.7rem;
+  margin-top: -0.7rem;
+  opacity: 0.9;
+}
+.main-container .album-image {
+  display: flex;
+  justify-content: center;
+}
+.main-container .album-image img {
+  width: 13rem;
+  border-radius: 2rem;
+}
+.status-controls {
+  background-color: #ffffff;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem 2rem 0 0;
+}
+.seek-container {
+  width: 90%;
+  height: 20%;
+  margin-top: 2rem;
+}
+.seek-container .seektime {
+  display: flex;
+  justify-content: space-between;
+}
+.seek-container .seektime h6 {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.seek-container .seekbar .seek {
+  height: 5px;
+  width: 100%;
+  display: inline-block;
+  background-color: rgb(218, 218, 218);
+  border-radius: 10px;
+}
+.seek-container .seekbar .back {
+  position: relative;
+}
+.seek-container .seekbar .front {
+  position: absolute;
+  top: 0;
+  width: 32%;
+  background-color: rgb(16, 135, 204);
+}
+.status-controls #song-controls {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+#song-controls .controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+#song-controls .uibtn {
+  font-size: 12px;
+  font-weight: 100;
+}
+#song-controls .controls .play {
+  width: 3rem;
+  height: 3rem;
+  background-color: #0071eb;
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 0px 10px 15px #0072eb73;
+}
+#song-controls .controls .play:active {
+  transform: scale(0.9);
+  transition: transform 0.1s ease;
+}
+
+#song-controls .controls #select-song {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+  height: 3rem;
+  box-shadow: 0px 10px 25px -10px #00000059;
+  border-radius: 0 0rem 1rem 1rem;
+  padding: 0 0.6rem;
+  position: absolute;
+  top: 50%;
+}
+#select-song i {
+  font-size: 1rem;
+  color: rgb(41, 41, 41);
+}
+.background {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  z-index: 0;
+}
+.graphicr {
+  right: 0;
+  top: 0;
+  background: linear-gradient(
+    153deg,
+    rgba(249, 248, 248, 1) 0%,
+    rgba(236, 236, 236, 0.8267682072829132) 100%
+  );
+}
+.graphicl {
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(
+    -153deg,
+    rgba(249, 248, 248, 1) 0%,
+    rgba(236, 236, 236, 0.8267682072829132) 100%
+  );
+}
